@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["5M PROJECT","5M PROJECT"];
+const statusMessages = ["VOR V ZAKONE PROJECT","OG ROLEPLAY"];
 
 
 let currentIndex = 0;
