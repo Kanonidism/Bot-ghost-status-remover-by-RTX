@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Kappa Services","Kappa Services"];
+const statusMessages = ["🌴Chill Haven,"🌴Chill Heaven"];
 
 
 let currentIndex = 0;
