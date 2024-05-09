@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["🐊Lacoste Project,"🔨Made by Kappa"];
+const statusMessages = ["Lacoste Project","Lacoste Project"];
 
 
 let currentIndex = 0;
