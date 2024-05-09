@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["🌴Chill Haven,"🌴Chill Heaven"];
+const statusMessages = ["🐊LACOSTE,"🐊LACOSTE"];
 
 
 let currentIndex = 0;
@@ -51,6 +51,36 @@ async function login() {
     process.exit(1);
   }
 }
+
+import discord
+from discord.ext import commands
+
+# Define the intents that your bot will use
+intents = discord.Intents.default()
+intents.messages = True
+intents.guilds = True
+intents.message_content = True
+
+# Create a bot instance with a specific command prefix and the defined intents
+client = commands.Bot(command_prefix=";", intents=intents)
+
+@client.event
+async def on_ready():
+    print('Online')
+    print(f'Logged in as: {client.user.id}')
+    # Set the bot's activity
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Luna"))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.lower() == "ping":
+        await message.reply("Pong successful!")
+
+# Securely handle your token
+token = "MTIzNzkzMTQxMzI2NTk3MzI0OQ.GB2qDt.bX8IRrHUCqc6pZ7MWXzyv5zGPxaJIMgpsWtKns"  # Replace 'your_token_here' with your actual Discord bot token
+client.run(token)
 
 /**
  ██████╗░████████╗██╗░░██╗           
